@@ -1,0 +1,36 @@
+# NAME: X
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Quantumult-X-Rules
+# 说明: X(Twitter) 分流规则，基于 blackmatrix7 的 Twitter.list，移除 grok.com（grok 归 AI 分流）
+HOST-SUFFIX,ads-twitter.com,X平台
+HOST-SUFFIX,cms-twdigitalassets.com,X平台
+HOST-SUFFIX,periscope.tv,X平台
+HOST-SUFFIX,pscp.tv,X平台
+HOST-SUFFIX,t.co,X平台
+HOST-SUFFIX,tellapart.com,X平台
+HOST-SUFFIX,tweetdeck.com,X平台
+HOST-SUFFIX,twimg.co,X平台
+HOST-SUFFIX,twimg.com,X平台
+HOST-SUFFIX,twimg.org,X平台
+HOST-SUFFIX,twitpic.com,X平台
+HOST-SUFFIX,twitter.biz,X平台
+HOST-SUFFIX,twitter.com,X平台
+HOST-SUFFIX,twitter.jp,X平台
+HOST-SUFFIX,twittercommunity.com,X平台
+HOST-SUFFIX,twitterflightschool.com,X平台
+HOST-SUFFIX,twitterinc.com,X平台
+HOST-SUFFIX,twitteroauth.com,X平台
+HOST-SUFFIX,twitterstat.us,X平台
+HOST-SUFFIX,twtrdns.net,X平台
+HOST-SUFFIX,twttr.com,X平台
+HOST-SUFFIX,twttr.net,X平台
+HOST-SUFFIX,twvid.com,X平台
+HOST-SUFFIX,vine.co,X平台
+HOST-SUFFIX,x.com,X平台
+HOST-KEYWORD,twitter,X平台
+IP-CIDR,192.133.76.0/22,X平台
+IP-CIDR,199.59.148.0/22,X平台
+IP-CIDR,199.96.56.0/21,X平台
+IP-CIDR,202.160.128.0/22,X平台
+IP-CIDR,209.237.192.0/19,X平台
+IP-CIDR,69.195.160.0/19,X平台
