@@ -1,0 +1,6 @@
+# NAME: Gate
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Quantumult-X-Rules
+# 说明: Gate 交易所分流规则（blackmatrix7 无此规则，手动维护）
+HOST-SUFFIX,gate.io,交易所选择
+HOST-SUFFIX,gateio.com,交易所选择
