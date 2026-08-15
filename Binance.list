@@ -1,0 +1,20 @@
+# NAME: Binance
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Quantumult-X-Rules
+# 说明: Binance 币安分流规则（自建，参考 blackmatrix7 并补充官方域名/生态域名）
+host-suffix,binance.com,Binance
+host-suffix,binance.vision,Binance
+host-suffix,binance.org,Binance
+host-suffix,binance.me,Binance
+host-suffix,binance.cloud,Binance
+host-suffix,binancecnt.com,Binance
+host-suffix,binancefuture.com,Binance
+host-suffix,binancezh.com,Binance
+host-suffix,bnbstatic.com,Binance
+host-suffix,bnbchain.org,Binance
+host-suffix,bnappzh.co,Binance
+host-suffix,bnbzh.ac,Binance
+host-suffix,bntrace.com,Binance
+host-suffix,saasexch.cc,Binance
+host-suffix,saasexch.com,Binance
+host-suffix,bscscan.com,Binance

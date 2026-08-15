@@ -1,9 +1,10 @@
 # NAME: Bybit
 # AUTHOR: Jason3u
 # REPO: https://github.com/Jason3u/Quantumult-X-Rules
-# 说明: Bybit 交易所分流规则（blackmatrix7 无此规则，手动维护）
-HOST-SUFFIX,bybit.com,交易所选择
-HOST-SUFFIX,bybitglobal.com,交易所选择
-HOST-SUFFIX,bybit.nl,交易所选择
-HOST-SUFFIX,bybits.com,交易所选择
-HOST-SUFFIX,bybit.sg,交易所选择
+# 说明: Bybit 分流规则（自建，含全球站/备用站/API 域名）
+host-suffix,bybit.com,Bybit
+host-suffix,bybitglobal.com,Bybit
+host-suffix,bybit.nl,Bybit
+host-suffix,bytick.com,Bybit
+host-suffix,bybits.com,Bybit
+host-suffix,bybit.sg,Bybit

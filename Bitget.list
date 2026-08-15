@@ -1,9 +1,10 @@
 # NAME: Bitget
 # AUTHOR: Jason3u
 # REPO: https://github.com/Jason3u/Quantumult-X-Rules
-# 说明: Bitget 交易所分流规则（blackmatrix7 无此规则，手动维护）
-HOST-SUFFIX,bitget.com,交易所选择
-HOST-SUFFIX,bitget.cc,交易所选择
-HOST-SUFFIX,bitget.site,交易所选择
-HOST-SUFFIX,bitget.io,交易所选择
-HOST-SUFFIX,bitget.cloud,交易所选择
+# 说明: Bitget 分流规则（自建，含海外站/中文区/备用域名）
+host-suffix,bitget.com,Bitget
+host-suffix,bitget.site,Bitget
+host-suffix,bitget.info,Bitget
+host-suffix,bitget.io,Bitget
+host-suffix,bitget.cc,Bitget
+host-suffix,bitget.cloud,Bitget
