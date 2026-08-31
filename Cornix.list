@@ -1,0 +1,5 @@
+# NAME: Cornix
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Quantumult-X-Rules
+# 说明: Cornix 自动交易平台分流规则（覆盖官网/Web Dashboard/API/帮助中心）
+host-suffix,cornix.io,Cornix
