@@ -1,0 +1,8 @@
+# NAME: Fomo
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Proxy-Rules-Collection
+# 说明: Fomo 官方网站、应用及永续合约相关域名；仅用于合法、符合服务条款的网络分流
+host-suffix,fomo.family,Fomo
+host-suffix,fomoapp.net,Fomo
+host-suffix,onfomo.com,Fomo
+host-suffix,fomoperps.com,Fomo
