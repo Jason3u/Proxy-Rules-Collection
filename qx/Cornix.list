@@ -1,5 +1,29 @@
 # NAME: Cornix
 # AUTHOR: Jason3u
 # REPO: https://github.com/Jason3u/Proxy-Rules-Collection
-# 说明: Cornix 自动交易平台分流规则（覆盖官网/Web Dashboard/API/帮助中心）
+# 说明: Cornix 自动交易平台分流规则
+# 覆盖官网/dashboard/API/WebSocket（均为 cornix.io 同源，含 wss://dashboard.cornix.io/ws/ws/）
+# 以及 dashboard 实际加载的第三方运行时依赖（2026-09-06 从 dashboard.cornix.io JS 包实测提取）：
+#   intercom.io / intercom.help     客服聊天组件（内嵌 UI，加载慢会导致界面转圈）
+#   country.is                      国家检测 API（可能阻塞界面逻辑）
+#   mixpanel.com / mxpnl.com        埋点上报与 CDN
+#   avo.app                         埋点 schema
+#   hotjar.com                      录屏分析
+#   sentry.io                       错误上报（*.ingest.sentry.io）
+#   whop.com                        订阅支付（dash.whop.com）
+#   calendly.com                    预约链接
+#   googletagmanager.com            GTM 埋点（大陆直连不通，统一走代理）
+# 注：极验 gt.js 从 dashboard.cornix.io 同源加载（已覆盖），其运行时域名 geetest.com 有国内节点，
+#     走 geoip cn 直连即为最优，故不收入本规则
 host-suffix,cornix.io,Cornix
+host-suffix,intercom.io,Cornix
+host-suffix,intercom.help,Cornix
+host-suffix,country.is,Cornix
+host-suffix,mixpanel.com,Cornix
+host-suffix,mxpnl.com,Cornix
+host-suffix,avo.app,Cornix
+host-suffix,hotjar.com,Cornix
+host-suffix,sentry.io,Cornix
+host-suffix,whop.com,Cornix
+host-suffix,calendly.com,Cornix
+host-suffix,googletagmanager.com,Cornix

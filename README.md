@@ -22,7 +22,7 @@
 | Bybit | Bybit 全球站、备用站及 API | [`qx/Bybit.list`](qx/Bybit.list) | [`clash/Bybit.yaml`](clash/Bybit.yaml) |
 | Bitget | Bitget 海外站、中文区及备用域名 | [`qx/Bitget.list`](qx/Bitget.list) | [`clash/Bitget.yaml`](clash/Bitget.yaml) |
 | Gate | Gate.io、Gate.com 及备用域名 | [`qx/Gate.list`](qx/Gate.list) | [`clash/Gate.yaml`](clash/Gate.yaml) |
-| Cornix | 官网、Dashboard、API 及帮助中心 | [`qx/Cornix.list`](qx/Cornix.list) | [`clash/Cornix.yaml`](clash/Cornix.yaml) |
+| Cornix | 官网、Dashboard、API、WebSocket 及第三方运行时依赖（intercom/country.is/mixpanel/hotjar/sentry/whop 等） | [`qx/Cornix.list`](qx/Cornix.list) | [`clash/Cornix.yaml`](clash/Cornix.yaml) |
 | Fomo | 官方网站、应用及永续合约相关域名 | [`qx/Fomo.list`](qx/Fomo.list) | [`clash/Fomo.yaml`](clash/Fomo.yaml) |
 | TradingView | 官网、中文站、图表数据与 API | [`qx/TradingView.list`](qx/TradingView.list) | [`clash/TradingView.yaml`](clash/TradingView.yaml) |
 
