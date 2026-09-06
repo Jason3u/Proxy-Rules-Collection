@@ -1,0 +1,40 @@
+# NAME: Telegram
+# AUTHOR: Jason3u
+# REPO: https://github.com/Jason3u/Proxy-Rules-Collection
+# 说明: Telegram 分流规则（域名对齐 blackmatrix7，IP 段为 TG 官方数据中心 CIDR）
+# 关键：TG App 收发消息直连数据中心 IP，不经过 DNS 解析——
+#       只配域名规则永远匹配不到 App 核心流量，必须配合 ip-cidr / ip6-cidr 才能完整接管
+# 域名：官网/分享链接/Telegraph/贴纸与媒体 CDN/桌面版/开发者门户等
+# IP：149.154.160.0/20 与 91.108.0.0/16 为 TG 主 DC 段（亚洲用户主要落在 DC5 新加坡）
+host-suffix,cdn-telegram.org,Telegram
+host-suffix,comments.app,Telegram
+host-suffix,contest.com,Telegram
+host-suffix,graph.org,Telegram
+host-suffix,legra.ph,Telegram
+host-suffix,mbrx.app,Telegram
+host-suffix,quiz.directory,Telegram
+host-suffix,stel.com,Telegram
+host-suffix,t.me,Telegram
+host-suffix,tdesktop.com,Telegram
+host-suffix,telega.one,Telegram
+host-suffix,telegra.ph,Telegram
+host-suffix,telegram-cdn.org,Telegram
+host-suffix,telegram.dog,Telegram
+host-suffix,telegram.me,Telegram
+host-suffix,telegram.org,Telegram
+host-suffix,telegram.space,Telegram
+host-suffix,telegramdownload.com,Telegram
+host-suffix,telesco.pe,Telegram
+host-suffix,tg.dev,Telegram
+host-suffix,tx.me,Telegram
+host-suffix,usercontent.dev,Telegram
+ip-cidr,5.28.192.0/18,Telegram
+ip-cidr,91.108.0.0/16,Telegram
+ip-cidr,109.239.140.0/24,Telegram
+ip-cidr,139.59.210.98/32,Telegram
+ip-cidr,149.154.160.0/20,Telegram
+ip-cidr,196.55.216.167/32,Telegram
+ip6-cidr,2001:67c:4e8::/48,Telegram
+ip6-cidr,2001:b28:f23c::/47,Telegram
+ip6-cidr,2001:b28:f23f::/48,Telegram
+ip6-cidr,2a0a:f280::/29,Telegram
