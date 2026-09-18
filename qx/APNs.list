@@ -1,0 +1,18 @@
+# NAME: APNs
+# Source: https://raw.githubusercontent.com/ttyyss2233/Tool/main/shadowrocket/mokuai/Apns.module
+# QX syntax conversion; all 12 source rules retained. QX only, no Clash sync.
+# Import with force-policy=APNs, opt-parser=false, inserted-resource=true before Apple rules.
+# akadns.net and apple.com.edgekey.net also match non-APNs traffic (retained for tutorial parity).
+# Routing rules cannot enable iOS APNs tunnel capture. Do not MitM APNs traffic.
+host-suffix,push.apple.com,APNs
+host-suffix,akadns.net,APNs
+host-keyword,apple.com.edgekey.net,APNs
+ip-cidr,17.249.0.0/16,APNs
+ip-cidr,17.252.0.0/16,APNs
+ip-cidr,17.57.144.0/22,APNs
+ip-cidr,17.188.128.0/18,APNs
+ip-cidr,17.188.20.0/23,APNs
+ip6-cidr,2620:149:a44::/48,APNs
+ip6-cidr,2403:300:a42::/48,APNs
+ip6-cidr,2403:300:a51::/48,APNs
+ip6-cidr,2a01:b740:a42::/48,APNs
