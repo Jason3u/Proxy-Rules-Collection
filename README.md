@@ -10,13 +10,12 @@
 └── clash/    # Clash / Mihomo rule-provider 格式（.yaml）
 ```
 
-除标注「仅 QX」的规则外，两种格式内容对应，区别只在客户端要求的语法和文件结构。不要把 `qx/` 文件直接当作 Clash 规则集导入，也不要把 `clash/` YAML 直接填入 QX 的 `filter_remote`。
+两种格式内容对应，区别只在客户端要求的语法和文件结构。不要把 `qx/` 文件直接当作 Clash 规则集导入，也不要把 `clash/` YAML 直接填入 QX 的 `filter_remote`。
 
 ## 规则列表
 
 | 规则 | 覆盖内容 | QX 文件 | Clash 文件 |
 | --- | --- | --- | --- |
-| APNs | 苹果推送代理测试，完整转换指定 Shadowrocket 模块 | [`qx/APNs.list`](qx/APNs.list) | 不提供（仅 QX） |
 | X | X / Twitter 及相关域名与 IP | [`qx/X.list`](qx/X.list) | [`clash/X.yaml`](clash/X.yaml) |
 | Binance | 币安及生态域名 | [`qx/Binance.list`](qx/Binance.list) | [`clash/Binance.yaml`](clash/Binance.yaml) |
 | OKX | OKX、OKEX、OKLink 及 CDN | [`qx/OKX.list`](qx/OKX.list) | [`clash/OKX.yaml`](clash/OKX.yaml) |
@@ -78,22 +77,3 @@ rules:
 ## 免责声明
 
 规则仅用于个人网络分流和测试。请遵守所在地区法律法规、服务条款及目标平台的使用政策。
-
-## APNs 苹果推送测试（仅 QX）
-
-来源：[ttyyss2233/Tool 的 Apns.module](https://raw.githubusercontent.com/ttyyss2233/Tool/main/shadowrocket/mokuai/Apns.module)。保留全部 12 条规则，转换为 QX 原生分流语法，无需资源解析器，不提供 Clash 副本。
-
-在 `[policy]` 中添加：
-
-```ini
-static=APNs固定节点, resource-tag-regex=.+, server-tag-regex=.+
-static=APNs, APNs固定节点, direct
-```
-
-将下列引用放在 `[filter_remote]` 最前面，先于 Apple 直连规则：
-
-```ini
-https://raw.githubusercontent.com/Jason3u/Proxy-Rules-Collection/main/qx/APNs.list, tag=APNs, force-policy=APNs, inserted-resource=true, opt-parser=false, update-interval=3600, enabled=true
-```
-
-在 APNs固定节点 中选择一个稳定的具体节点。此配置只是路由规则，不能开启 iOS 的 APNs 隧道接管；生效与否需在设备网络活动中验证。APNs 是多个应用共享的系统推送通道，不是 Telegram 专属通道。请勿对 APNs 做 MitM 解密。原模块的 akadns.net 和 apple.com.edgekey.net 匹配较宽，可能影响非推送流量，保留它们是为了复现原教程。可切换 APNs → direct 做对照测试。
