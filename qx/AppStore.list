@@ -1,0 +1,14 @@
+# NAME: AppStore
+# QX only: App Store search/catalog endpoints before the general Apple rules.
+# App Store apps.apple.com subdomains include amp-api-search-edge.apps.apple.com.
+# iTunes search/catalog bootstrap hosts are included without proxying all Apple traffic.
+# Reference: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/Apple/Apple.list
+# Use force-policy=AppStore, inserted-resource=true, opt-parser=false.
+host-suffix,apps.apple.com,AppStore
+host,itunes.apple.com,AppStore
+host,search.itunes.apple.com,AppStore
+host,se.itunes.apple.com,AppStore
+host,se-edge.itunes.apple.com,AppStore
+host,init.itunes.apple.com,AppStore
+host,sf-api-token-service.itunes.apple.com,AppStore
+host,upp.itunes.apple.com,AppStore

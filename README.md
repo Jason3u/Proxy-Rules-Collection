@@ -10,12 +10,13 @@
 └── clash/    # Clash / Mihomo rule-provider 格式（.yaml）
 ```
 
-两种格式内容对应，区别只在客户端要求的语法和文件结构。不要把 `qx/` 文件直接当作 Clash 规则集导入，也不要把 `clash/` YAML 直接填入 QX 的 `filter_remote`。
+除标注「仅 QX」的规则外，两种格式内容对应，区别只在客户端要求的语法和文件结构。不要把 `qx/` 文件直接当作 Clash 规则集导入，也不要把 `clash/` YAML 直接填入 QX 的 `filter_remote`。
 
 ## 规则列表
 
 | 规则 | 覆盖内容 | QX 文件 | Clash 文件 |
 | --- | --- | --- | --- |
+| AppStore | App Store 搜索与目录主机 | [qx/AppStore.list](qx/AppStore.list) | 不提供（仅 QX） |
 | X | X / Twitter 及相关域名与 IP | [`qx/X.list`](qx/X.list) | [`clash/X.yaml`](clash/X.yaml) |
 | Binance | 币安及生态域名 | [`qx/Binance.list`](qx/Binance.list) | [`clash/Binance.yaml`](clash/Binance.yaml) |
 | OKX | OKX、OKEX、OKLink 及 CDN | [`qx/OKX.list`](qx/OKX.list) | [`clash/OKX.yaml`](clash/OKX.yaml) |
@@ -77,3 +78,7 @@ rules:
 ## 免责声明
 
 规则仅用于个人网络分流和测试。请遵守所在地区法律法规、服务条款及目标平台的使用政策。
+
+## App Store（仅 QX）
+
+qx/AppStore.list 用于 apps.apple.com 子域及 iTunes 搜索/目录接口。需创建 AppStore 策略组，并使用 force-policy=AppStore、inserted-resource=true、opt-parser=false 引用，放在通用 Apple 直连资源之前。该规则不包含 APNs，不同步 Clash。
