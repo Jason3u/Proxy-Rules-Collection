@@ -1,0 +1,33 @@
+# NAME: APNs
+# CLIENT: Quantumult X (native filter rules; no resource parser required)
+# UPDATED: 2026-09-20
+# Sources:
+# https://raw.githubusercontent.com/ttyyss2233/Tool/main/shadowrocket/mokuai/Apns.module
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list
+# https://support.apple.com/en-us/102266
+# Narrowed from the source module: no blanket akadns.net / apple.com.edgekey.net rule.
+# QX conversion: DOMAIN-SUFFIX -> host-suffix; IP-CIDR6 -> ip6-cidr; omit no-resolve.
+# Applies only to traffic handled by QX. Does not enable system APNs capture.
+# Shared Apple push channel, not Telegram-only. Do not apply MitM to APNs.
+# IP rules match whole ranges, not only APNs ports; these are not exclusive service guarantees.
+
+# Push domain and explicit Apple push aliases (blackmatrix7)
+host-suffix,push.apple.com,APNs
+host,courier-push-apple.com.akadns.net,APNs
+host,init-p01md-lb.push-apple.com.akadns.net,APNs
+host,init-p01st-lb.push-apple.com.akadns.net,APNs
+host,init-s01st-lb.push-apple.com.akadns.net,APNs
+host,push-apple.com.akadns.net,APNs
+
+# IPv4 ranges listed by Apple for APNs connectivity
+ip-cidr,17.249.0.0/16,APNs
+ip-cidr,17.252.0.0/16,APNs
+ip-cidr,17.57.144.0/22,APNs
+ip-cidr,17.188.128.0/18,APNs
+ip-cidr,17.188.20.0/23,APNs
+
+# IPv6 ranges listed by Apple for APNs connectivity
+ip6-cidr,2620:149:a44::/48,APNs
+ip6-cidr,2403:300:a42::/48,APNs
+ip6-cidr,2403:300:a51::/48,APNs
+ip6-cidr,2a01:b740:a42::/48,APNs
