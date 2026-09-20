@@ -16,7 +16,7 @@
 
 | 规则 | 覆盖内容 | QX 文件 | Clash 文件 |
 | --- | --- | --- | --- |
-| APNs | 苹果系统推送域名及官方连接网段（精简合并版） | [qx/APNs.list](qx/APNs.list) | 不提供（仅 QX） |
+| Apple/apns | 苹果系统推送域名及官方连接网段（精简合并版） | [qx/Apple/apns.list](qx/Apple/apns.list) | 不提供（仅 QX） |
 | AppStore | App Store 搜索与目录主机 | [qx/AppStore.list](qx/AppStore.list) | 不提供（仅 QX） |
 | X | X / Twitter 及相关域名与 IP | [`qx/X.list`](qx/X.list) | [`clash/X.yaml`](clash/X.yaml) |
 | Binance | 币安及生态域名 | [`qx/Binance.list`](qx/Binance.list) | [`clash/Binance.yaml`](clash/Binance.yaml) |
@@ -86,7 +86,7 @@ qx/AppStore.list 用于 apps.apple.com 子域及 iTunes 搜索/目录接口。�
 
 ## APNs 苹果推送（仅 QX）
 
-[规则直链](https://raw.githubusercontent.com/Jason3u/Proxy-Rules-Collection/main/qx/APNs.list)。本次仅新增规则与说明，不自动修改 QX 主配置，不提供 Clash 版本。
+[规则直链](https://raw.githubusercontent.com/Jason3u/Proxy-Rules-Collection/main/qx/Apple/apns.list)。本次仅新增规则与说明，不自动修改 QX 主配置，不提供 Clash 版本。
 
 合并来源：[ttyyss2233 的 Apns.module](https://raw.githubusercontent.com/ttyyss2233/Tool/main/shadowrocket/mokuai/Apns.module)、[blackmatrix7 的 Apple.list](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list)，网段核对 [Apple 官方 APNs 文档](https://support.apple.com/en-us/102266)。共 15 条：1 条推送域名后缀、5 条明确的推送别名、5 条 IPv4、4 条 IPv6。已由 Shadowrocket 语法转换为 QX 原生语法，无需资源解析器。
 
@@ -101,7 +101,7 @@ static=APNs, 台湾节点, direct
 在 `[filter_remote]` 中添加以下内容，并置于通用 Apple 规则之前；同时检查是否有更高优先级的本地规则或排除路由：
 
 ```ini
-https://raw.githubusercontent.com/Jason3u/Proxy-Rules-Collection/main/qx/APNs.list, tag=APNs, force-policy=APNs, inserted-resource=true, opt-parser=false, update-interval=86400, enabled=true
+https://raw.githubusercontent.com/Jason3u/Proxy-Rules-Collection/main/qx/Apple/apns.list, tag=APNs, force-policy=APNs, inserted-resource=true, opt-parser=false, update-interval=86400, enabled=true
 ```
 
 这只是分流规则，不会开启 iOS 的系统推送隧道接管；仅对进入 QX 的连接生效，不能保证修复 Telegram 通知。APNs 是多个应用共用的系统推送通道，不是 Telegram 专属。不要对 APNs 进行 MitM 解密。启用后应检查实际连接是否命中 APNs，再做锁屏收通知测试；可手动切换 direct 对照。未在 iPhone 上进行运行验证。
